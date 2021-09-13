@@ -1,51 +1,111 @@
----
-subject: My Basic Email Template Subject
----
-
-<wrapper class="header">
-  <container>
-    <row class="collapse">
-      <columns small="6">
-        <img src="http://placehold.it/200x50/663399">
-      </columns>
-      <columns small="6">
-        <p class="text-right">BASIC</p>
-      </columns>
-    </row>
-  </container>
+<wrapper>
+    <container style="margin-top:32px; margin-bottom: 24px">
+        <row>
+            <columns>
+                <center>
+                    <img mc:edit="logo" class="logo"
+                        src="https://d2q86h5pvn46dj.cloudfront.net/resources/cm_logo_blue.png">
+                </center>
+            </columns>
+        </row>
+    </container>
 </wrapper>
+<wrapper>
+    <container class="main-content">
+        <row mc:repeatable="top-section" style="margin-top:42px;">
+            <columns small="12" mc:hideable>
+                <h1 mc:edit="title">Rejection feels awful. Nobody enjoys feeling like there
+                    is something wrong with yourself or that you aren't good
+                    enough.</h1>
+            </columns>
+        </row>
+        <row mc:hideable>
+            <columns small="12" mc:repeatable="top-content">
+                <p mc:edit="content">
+                    Dear&nbsp;*|FNAME|*,<br>
+                    <br>
+                    Often, that's exactly how rejection leaves
+                    us feeling.<br>
+                    <br>
+                    But, as awful as it is, rejection is unavoidable.<br>
+                    <br>
+                    Not everybody will want to date you. Some of your
+                    friendships will end. Jobs will turn you down. You won't
+                    always get your way.<br>
+                    <br>
+                    But, that's okay.<br>
+                    <br>
+                    Don’t let those rejections make you believe the lie that
+                    you’re fundamentally flawed or unworthy.<br>
+                    <br>
+                    If you struggle with doing that, remember this: <br> <br>
+                    <em>You’re so worthy that Jesus died for
+                        you.</em>
+                    <br> <br>
+                    And, “If God is for us, who can be against us?” (Romans
+                    8:31).<br>
+                    <br>
+                    You should remind yourself of those realities because
+                    they are just as real as the rejections that you will
+                    inevitably experience.<br>
+                    <br>
+                    Keep reading for this week's collection of articles
+                    (including one about managing rejection with
+                    grace)!&nbsp; 
+                </p>
 
-<container>
+            </columns>
+        </row>
+        {{> banner}}
+        <container class="verticalMargin" mc:hideable mc:variant="POST FEATURE ITEMS">
+            <row mc:repeatable="post-grid-items-a1">
+                {{> post-grid-item index="a1"}}
+                {{> post-grid-item index="a2"}}
+            </row>
+        </container>
+        {{> single-col-posts}}
+        {{> post-block}}
 
-  <spacer size="16"></spacer>
-  
-  <row>
-    <columns small="12">
-      
-      <h1>Hi, Susan Calvin</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iste, amet consequatur a veniam.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut optio nulla et, fugiat. Maiores accusantium nostrum asperiores provident, quam modi ex inventore dolores id aspernatur architecto odio minima perferendis, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quos quasi itaque beatae natus fugit provident delectus, magnam laudantium odio corrupti sit quam. Optio aut ut repudiandae velit distinctio asperiores?</p>
-      <callout class="primary">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellendus natus, sint ea optio dignissimos asperiores inventore a molestiae dolorum placeat repellat excepturi mollitia ducimus unde doloremque ad, alias eos!</p>
-      </callout>
-    </columns>
-  </row>
-  <wrapper class="secondary">
+        <container class="verticalMargin" mc:hideable mc:variant="POST GRID ITEMS">
+            <row mc:repeatable="post-grid-items-c1">
+                <columns large="6" small="12" style="padding-right: 16px;">
+                    {{> post-list-item index="c1"}}
+                </columns>
+                <columns large="6" small="12">
+                    {{> post-list-item index="c2"}}
+                </columns>
+            </row>
+            <row mc:repeatable="post-grid-items-c2">
+                <columns large="6" small="12" style="padding-right: 16px;">
+                    {{> post-list-item index="c3"}}
+                </columns>
+                <columns large="6" small="12">
+                    {{> post-list-item index="c4"}}
+                </columns>
+            </row>
+        </container>
+        <row mc:hideable>
+            <columns mc:edit="bottom-content" small="12" mc:repeatable="bottom-content">
+                <p> Don't forget, as much as rejection, heartbreak, and loss
+                    can hurt...we don't always know in the moment what is
+                    best for us.&nbsp;<br>
+                    <br>
+                    But, God does.<br>
+                    <br>
+                    So, when He closes a door, even a door you wanted open
+                    SO BADLY, remember, He knows what is best for you.<br>
+                    <br>
+                    And, the best is yet to come!<br>
+                    <br>
+                    Sincerely,
+                </p>
+            </columns>
+        </row>
 
-    <spacer size="16"></spacer>
+        {{> signature}}
+        {{> share}}
 
-    <row>
-      <columns large="6">
-        <h5>Connect With Us:</h5>
-        <button class="facebook expand" href="http://zurb.com">Facebook</button>
-        <button class="twitter expand" href="http://zurb.com">Twitter</button>
-        <button class="google expand" href="http://zurb.com">Google+</button>
-      </columns>
-      <columns large="6">
-        <h5>Contact Info:</h5>
-        <p>Phone: 408-341-0600</p>
-        <p>Email: <a href="mailto:foundation@zurb.com">foundation@zurb.com</a></p>
-      </columns>
-    </row>
-  </wrapper>
-</container>
+    </container>
+    {{> instagram-posts}}
+    {{> footer}}
+</wrapper>

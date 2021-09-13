@@ -1,0 +1,17 @@
+<container class="instagram-block" mc:hideable mc:variant="POST FEATURE ITEMS">
+    <row style="margin-top: 32px;">
+    </row>
+    <row mc:hideable mc:repeatable="post-grid-items">
+        <columns small="12">
+            <h4 mc:edit="instagram-title">Check out these 4 things for this week</h4>
+        </columns>
+    </row>
+    <row mc:repeatable="post-grid-items-1">
+        {{> instagram-post index="1"}}
+        {{> instagram-post index="2"}}
+    </row>
+    <row mc:repeatable="post-grid-items-2">
+        {{> instagram-post index="3"}}
+        {{> instagram-post index="4"}}
+    </row>
+</container>
