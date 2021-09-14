@@ -143,6 +143,7 @@ table.button.google table td {
     padding-right:10px !important;
 }
 .post-content-col {
+    padding-top:6px;
     max-width: calc(100% - 95px) !important;
 }
 
@@ -185,4 +186,16 @@ table.button.google table td {
 }
 .topMarginSmall {
     margin-top: 16px !important;
+}
+
+.dynamic-padding-left {
+    padding-left:32px;
+    padding-right:32px;
+}
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+    .dynamic-padding-left {
+        padding-left:16px !important;
+        padding-right:16px !important;
+    }
 }

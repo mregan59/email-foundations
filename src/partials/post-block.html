@@ -1,10 +1,8 @@
-<wrapper mc:repeatable="post-grid-title" mc:hideable class="topMarginSmall">
+<div mc:repeatable="post-grid-title" mc:hideable class="topMarginSmall">
     <container class="block">
-        <row style="margin-top:24px;">
-            <columns small="12">
-                <p mc:edit="post-block-title" class="subheader">Religious Articles</p>
-            </columns>
-        </row>
+        <div style="margin-top:24px; margin-bottom: 16px;" class="dynamic-padding-left">
+            <p mc:edit="post-block-title" class="subheader">Religious Articles</p>
+        </div>
         <row mc:repeatable="post-grid-items-2">
             <columns large="6" small="12" style="padding-right: 16px;">
                 {{> post-list-item index="1"}}
@@ -22,4 +20,4 @@
             </columns>
         </row>
     </container>
-</wrapper>
+</div>

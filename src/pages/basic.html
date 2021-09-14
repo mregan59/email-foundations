@@ -57,34 +57,15 @@
             </columns>
         </row>
         {{> banner}}
-        <container class="verticalMargin" mc:hideable mc:variant="POST FEATURE ITEMS">
+        <div class="verticalMargin" mc:hideable mc:variant="POST FEATURE ITEMS">
             <row mc:repeatable="post-grid-items-a1">
                 {{> post-grid-item index="a1"}}
                 {{> post-grid-item index="a2"}}
             </row>
-        </container>
+        </div>
         {{> single-col-posts}}
         {{> post-block}}
-
-        <container class="verticalMargin" mc:hideable mc:variant="POST GRID ITEMS">
-            <row mc:repeatable="post-grid-items-c1">
-                <columns large="6" small="12" style="padding-right: 16px;">
-                    {{> post-list-item index="c1"}}
-                </columns>
-                <columns large="6" small="12">
-                    {{> post-list-item index="c2"}}
-                </columns>
-            </row>
-            <row mc:repeatable="post-grid-items-c2">
-                <columns large="6" small="12" style="padding-right: 16px;">
-                    {{> post-list-item index="c3"}}
-                </columns>
-                <columns large="6" small="12">
-                    {{> post-list-item index="c4"}}
-                </columns>
-            </row>
-        </container>
-        <row mc:hideable>
+        <row mc:hideable style="margin-top:42px;">
             <columns mc:edit="bottom-content" small="12" mc:repeatable="bottom-content">
                 <p> Don't forget, as much as rejection, heartbreak, and loss
                     can hurt...we don't always know in the moment what is
